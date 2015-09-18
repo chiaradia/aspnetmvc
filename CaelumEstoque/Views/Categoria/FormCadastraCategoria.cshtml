@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FormCadastraCategoria</title>
+</head>
+<body>
+    <div> 
+        <form action="/Categoria/Adiciona" method="post">
+            <label for="id">ID: </label>
+            <input id="id" name="categoria.Id" /> <br />
+            @Html.ValidationMessage("categoria.Id")
+            
+            <label for="nome">Nome: </label>
+            <input id="nome" name="categoria.Nome" value="@ViewBag.Categoria.Nome" /> <br />
+
+            <label for="descricao">Descrição: </label>
+            <input id="descricao" name="categoria.Descricao" value="@ViewBag.Categoria.Descricao" /> <br />
+
+            <input type="submit" value="Cadastrar" />
+        </form>
+    </div>
+</body>
+</html>
